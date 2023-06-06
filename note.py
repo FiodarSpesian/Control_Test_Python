@@ -1,14 +1,17 @@
 import datetime
 
 
-class Note:
+class Note(dict):
     creation_day = datetime.datetime.today().strftime("%d.%m.%Y %H:%M:%S")
 
     def __init__(self):
+        super().__init__()
         self.name = input("Enter TITLE of note: ")
         self.event_day = input("Enter EVENT DAY in format dd.mm.yyyy: ")
         self.note_content = input("Enter content of note: ")
+        self.note = {'title': self.name, "event_day": self.event_day,
+                     'note_content': self.note_content, 'creation_day': self.creation_day}
         print("Note create successful!")
 
-    def __repr__(self):
-        return self.name + ";" + self.event_day + ";" + self.note_content + ";" + "<" + self.creation_day + ">"
+    def __str__(self):
+        return str(self.note)

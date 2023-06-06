@@ -1,5 +1,6 @@
 from Comands.create_note import CreateNote
 from Comands.exit import Exit
+from Comands.save import Save
 from Comands.show_notes import Show
 from notebook import Notebook
 
@@ -13,6 +14,8 @@ class Menu(list):
         self.commands.append(create_note)
         show = Show()
         self.commands.append(show)
+        save = Save()
+        self.commands.append(save)
         finish = Exit()
         self.commands.append(finish)
 
