@@ -11,4 +11,5 @@ class Note:
         print("Note create successful!")
 
     def __repr__(self):
-        return f"Date of creation:<{self.creation_day}> {self.name}; {self.note_content}; {self.event_day}"
+        return self.name
+        #return f"Date of creation:<{self.creation_day}> {self.name}; {self.note_content}; {self.event_day}"

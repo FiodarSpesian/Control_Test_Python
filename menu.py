@@ -18,7 +18,15 @@ class Menu(list):
     def __len__(self):
         return len(self.commands)
 
-    def print(self):
+    def __iter__(self):
+        for i in range(len(self.commands)):
+            var = self.commands[i].description
+
+    def __repr__(self):
+        return self.commands
+
+    def functions(self):
         for i in range(len(self.commands)):
             print(f"{i+1}. {self.commands[i]}")
+
 
