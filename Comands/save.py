@@ -10,5 +10,5 @@ class Save(Comand):
 
     def action(self, notebook):
         with open('notes.json', 'w') as file:
-            json.dump(notebook.push(), file, indent=3)
+            json.dump(notebook.push(), file, indent=5)
         print("Save successful.")
