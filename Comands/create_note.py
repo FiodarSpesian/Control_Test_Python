@@ -9,6 +9,7 @@ class CreateNote(Comand):
         self.description = description
         self.note = None
 
-    def action(self):
+    def action(self, notebook):
         self.note = Note()
-        return self.note
+        notebook.append(self.note)
+        return notebook

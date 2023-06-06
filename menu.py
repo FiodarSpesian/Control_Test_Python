@@ -1,6 +1,7 @@
 from Comands.create_note import CreateNote
 from Comands.exit import Exit
 from Comands.show_notes import Show
+from notebook import Notebook
 
 
 class Menu(list):
@@ -29,4 +30,5 @@ class Menu(list):
         for i in range(len(self.commands)):
             print(f"{i+1}. {self.commands[i]}")
 
-
+    def usr_val(self, chose, notebook):
+        return self.commands[chose].action(notebook)
