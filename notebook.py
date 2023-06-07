@@ -31,3 +31,8 @@ class Notebook(dict):
         for el in self.notes['notes']:
             dct['notes'].append(dict(el))
         return dct
+
+    def pull(self, dct):
+        for i in range(len(dct['notes'])):
+            self.notes['notes'].append(dct['notes'][i])
+        return self.notes

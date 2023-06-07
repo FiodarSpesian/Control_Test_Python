@@ -1,17 +1,19 @@
 import json
 from Comands.comand import Comand
+from notebook import Notebook
 
 
 class Save(Comand):
 
-    def __init__(self, description="Save notes."):
+    def __init__(self, description="Save new notes."):
         super().__init__()
         self.description = description
 
     def action(self, notebook):
-        with open('notes.json', 'w') as file:
-            json.dump(notebook.push(), file, indent=5)
-        print(type(notebook.push()))
-        print(type(notebook['notes']))
-        print(type(notebook['notes'][0]))
+        if notebook == Notebook():
+            with open('notes.json', 'w') as file:
+                json.dump(notebook.push(), file, indent=5)
+        else:
+            with open('notes.json', 'w') as file:
+                json.dump(notebook, file, indent=5)
         print("Save successful.")
