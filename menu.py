@@ -3,7 +3,6 @@ from Comands.delete import Delete
 from Comands.exit import Exit
 from Comands.save import Save
 from Comands.show_notes import Show
-from notebook import Notebook
 
 
 class Menu(list):

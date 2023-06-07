@@ -16,5 +16,5 @@ class Note(dict):
 
     def add_note(self):
         dct = {'title': self.name, "event_day": self.event_day,
-                     'note_content': self.note_content, 'creation_day': self.creation_day}
+               'note_content': self.note_content, 'creation_day': self.creation_day}
         return dct

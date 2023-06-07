@@ -1,4 +1,3 @@
-import json
 from Comands.comand import Comand
 from note import Note
 
@@ -12,6 +11,5 @@ class CreateNote(Comand):
 
     def action(self, notebook):
         self.note = Note()
-
         notebook['notes'].append(self.note.add_note())
         return notebook
