@@ -12,5 +12,5 @@ class CreateNote(Comand):
 
     def action(self, notebook):
         self.note = Note()
-        notebook['notes'].append(self.note)
+        notebook['notes'].append(self.note.add_note())
         return notebook

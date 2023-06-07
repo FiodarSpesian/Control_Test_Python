@@ -29,5 +29,5 @@ class Notebook(dict):
     def push(self):
         dct = {'notes': []}
         for el in self.notes['notes']:
-            dct['notes'].append(str(el))
+            dct['notes'].append(dict(el))
         return dct

@@ -17,5 +17,4 @@ class Service:
             if self.menu.usr_val(usr_in-1, self.notebook) == "exit":
                 print("You have been exit the program! \nBye.")
                 break
-            print(str(self.notebook))
             print()
