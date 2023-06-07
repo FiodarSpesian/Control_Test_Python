@@ -1,3 +1,4 @@
+from Comands.correct import Correct
 from Comands.create_note import CreateNote
 from Comands.delete import Delete
 from Comands.exit import Exit
@@ -16,6 +17,8 @@ class Menu(list):
         self.commands.append(show)
         save = Save()
         self.commands.append(save)
+        correct = Correct()
+        self.commands.append(correct)
         delete = Delete()
         self.commands.append(delete)
         finish = Exit()
