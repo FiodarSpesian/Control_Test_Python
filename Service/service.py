@@ -1,6 +1,5 @@
-import menu
-from menu import Menu
-from notebook import Notebook
+from Service.menu import Menu
+from Service.notebook import Notebook
 
 
 class Service:
