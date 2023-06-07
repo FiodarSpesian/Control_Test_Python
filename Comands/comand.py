@@ -1,4 +1,4 @@
-from notebook import Notebook
+from Service.notebook import Notebook
 
 
 class Comand:

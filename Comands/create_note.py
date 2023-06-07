@@ -1,5 +1,5 @@
 from Comands.comand import Comand
-from note import Note
+from Service.note import Note
 
 
 class CreateNote(Comand):

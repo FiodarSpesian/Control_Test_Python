@@ -1,6 +1,6 @@
 import json
 from Comands.comand import Comand
-from notebook import Notebook
+from Service.notebook import Notebook
 
 
 class Save(Comand):
