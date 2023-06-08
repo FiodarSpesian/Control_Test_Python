@@ -39,4 +39,8 @@ class Menu(list):
             print(f"{i+1}. {self.commands[i]}")
 
     def usr_val(self, chose, notebook):
-        return self.commands[chose].action(notebook)
+        try:
+            return self.commands[chose].action(notebook)
+        except IndexError:
+            print('\nEntered wrong value.')
+        return
